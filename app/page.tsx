@@ -1,6 +1,4 @@
 "use client";
-                className="space-y-5"
-              >
                 <input type="hidden" name="_subject" value="Nová poptávka z webu JZ ELEKTRO" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" value="https://elektro1-web.vercel.app/#kontakt" />
@@ -73,7 +71,7 @@
                 </button>
 
                 <p className="text-sm text-slate-500">
-                  Po prvním testovacím odeslání potvrďte aktivaci formuláře v e-mailu pro info@jzelektro.cz.
+                  Po prvním testovacím odeslání potvrďte aktivaci formuláře v e-mailu pro pecenyjirik@gmail.com.
                 </p>
               </form>
             </div>
