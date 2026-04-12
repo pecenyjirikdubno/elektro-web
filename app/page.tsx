@@ -43,6 +43,7 @@ export default function HomePage() {
     { label: "Revize VN/NN", href: "#revize" },
     { label: "Elektromontáže VN/NN", href: "#montaze" },
     { label: "Trafostanice", href: "#trafostanice" },
+    { label: "Reference", href: "#reference" },
     { label: "Kontaktujte nás", href: "#kontakt" },
   ];
 
@@ -351,6 +352,70 @@ export default function HomePage() {
                 kompletního uvedení do provozu.
               </p>
             </section>
+          </div>
+        </section>
+
+        <section id="reference" className="border-t border-amber-500/20 bg-slate-950">
+          <div className="mx-auto max-w-7xl px-6 py-20">
+            <div className="mb-12 max-w-2xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white">Reference</h2>
+              <p className="mt-4 text-slate-400">
+                Ukázky vybraných realizací z oblasti elektroinstalací, osvětlení a trafostanic.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2">
+              <article className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-sm">
+                <img
+                  src="/ref/ms1.jpg"
+                  alt="Rekonstrukce elektroinstalace a osvětlení v MŠ Kovářská Praha"
+                  className="h-72 w-full object-cover"
+                />
+                <div className="p-6">
+                  <div className="text-sm font-semibold text-amber-300">Praha</div>
+                  <h3 className="mt-2 text-2xl font-bold text-white">
+                    Rekonstrukce elektrických rozvodů – MŠ Kovářská Praha
+                  </h3>
+                  <p className="mt-4 text-slate-400">
+                    Výměna části elektrických rozvodů a kompletní výměna osvětlení v objektu
+                    mateřské školy. Součástí realizace byla instalace nových svítidel,
+                    úprava vybraných elektro tras a modernizace části rozvaděče.
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                    <li>• výměna části elektrických rozvodů</li>
+                    <li>• kompletní výměna osvětlení</li>
+                    <li>• úprava rozvaděče</li>
+                    <li>• bezpečnější a modernější provoz objektu</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-sm">
+                <img
+                  src="/ref/kb1.jpg"
+                  alt="Výstavba kioskové trafostanice KB Brno"
+                  className="h-72 w-full object-cover"
+                />
+                <div className="p-6">
+                  <div className="text-sm font-semibold text-amber-300">Brno</div>
+                  <h3 className="mt-2 text-2xl font-bold text-white">
+                    Výstavba kioskové trafostanice – KB Brno
+                  </h3>
+                  <p className="mt-4 text-slate-400">
+                    Dodávka a montáž trafostanice 22/0,4 kV včetně silnoproudých rozvodů,
+                    kabelových tras a technologického napojení. Realizace zahrnovala
+                    profesionální vedení kabelů, montáž rozvaděčů a přípravu zařízení
+                    pro spolehlivý dlouhodobý provoz.
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                    <li>• dodávka a montáž trafostanice 22/0,4 kV</li>
+                    <li>• instalace silnoproudých rozvodů</li>
+                    <li>• pokládka a vedení kabelových tras</li>
+                    <li>• montáž rozvaděčů a jištění</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
 
