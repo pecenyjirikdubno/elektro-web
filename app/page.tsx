@@ -1,4 +1,22 @@
 "use client";
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-medium text-slate-300">
+                      E-mail
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="vas@email.cz"
+                      className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-amber-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
                   <label className="mb-2 block text-sm font-medium text-slate-300">
                     Typ služby
                   </label>
