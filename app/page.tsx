@@ -1,90 +1,93 @@
 "use client";
-                <input type="hidden" name="_subject" value="Nová poptávka z webu JZ ELEKTRO" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://elektro1-web.vercel.app/#kontakt" />
-                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+import React from "react";
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">Jméno a příjmení</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Např. Jan Novák"
-                    className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-amber-400"
-                  />
-                </div>
+export default function HomePage() {
+  const rotatingTexts = [
+    "Máme více než 15 let zkušeností v oblasti silnoproudé elektrotechniky",
+    "Montáž a dodávky silnoproudých zařízení od projekce až po revizi",
+    "Montáž elektrických rozvodů NN/VN",
+    "Montáž hromosvodů",
+  ];
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-300">Telefon</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      placeholder="+420 ..."
-                      className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-amber-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-300">E-mail</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="vas@email.cz"
-                      className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-amber-400"
-                    />
-                  </div>
-                </div>
+  const [currentText, setCurrentText] = React.useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [heroVisible, setHeroVisible] = React.useState(false);
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">Typ služby</label>
-                  <select
-                    name="service"
-                    className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-amber-400"
-                  >
-                    <option>Projekce elektro</option>
-                    <option>Revize VN/NN</option>
-                    <option>Elektromontáže VN/NN</option>
-                    <option>Trafostanice</option>
-                    <option>Jiná poptávka</option>
-                  </select>
-                </div>
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((prev) => (prev + 1) % rotatingTexts.length);
+    }, 3000);
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">Zpráva</label>
-                  <textarea
-                    rows={5}
-                    name="message"
-                    required
-                    placeholder="Stručně popište, co potřebujete zajistit..."
-                    className="w-full rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-amber-400"
-                  />
-                </div>
+    return () => clearInterval(interval);
+  }, []);
 
-                <button
-                  type="submit"
-                  className="w-full rounded-2xl bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
-                >
-                  Odeslat poptávku
-                </button>
+  React.useEffect(() => {
+    const timer = setTimeout(() => setHeroVisible(true), 150);
+    return () => clearTimeout(timer);
+  }, []);
 
-                <p className="text-sm text-slate-500">
-                  Po prvním testovacím odeslání potvrďte aktivaci formuláře v e-mailu pro pecenyjirik@gmail.com.
-                </p>
-              </form>
-            </div>
+  const menuItems = [
+    { label: "Úvod", href: "#home" },
+    { label: "Projekce elektro", href: "#projekce" },
+    { label: "Revize VN/NN", href: "#revize" },
+    { label: "Elektromontáže VN/NN", href: "#montaze" },
+    { label: "Trafostanice", href: "#trafostanice" },
+    { label: "Kontaktujte nás", href: "#kontakt" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <header className="sticky top-0 z-50 border-b border-amber-500/20 bg-slate-950/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div>
+            <div className="text-xl font-bold tracking-tight text-white">JZ ELEKTRO</div>
+            <div className="text-sm text-slate-400">VN / NN / Projekce / Revize</div>
           </div>
-        </section>
-      </main>
 
-      <a
-        href="#kontakt"
-        className="fixed bottom-4 left-4 right-4 z-40 rounded-2xl bg-amber-400 px-6 py-4 text-center text-sm font-semibold text-slate-950 shadow-2xl transition hover:bg-amber-300 md:hidden"
-      >
-        Nezávazná poptávka
-      </a>
-    </div>
-  );
+          <nav className="hidden gap-6 md:flex">
+            {menuItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium text-slate-300 transition hover:text-amber-400"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <button
+            type="button"
+            aria-label="Otevřít menu"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="flex h-11 w-11 items-center justify-center rounded-2xl border border-amber-400/20 bg-slate-900 text-white md:hidden"
+          >
+            <div className="flex flex-col gap-1.5">
+              <span className={`h-0.5 w-5 bg-white transition ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`} />
+              <span className={`h-0.5 w-5 bg-white transition ${mobileMenuOpen ? "opacity-0" : ""}`} />
+              <span className={`h-0.5 w-5 bg-white transition ${mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+            </div>
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <div className="border-t border-amber-500/20 bg-slate-950 px-6 py-4 md:hidden">
+            <nav className="flex flex-col gap-4">
+              {menuItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-xl px-2 py-2 text-sm font-medium text-slate-300 transition hover:bg-slate-900 hover:text-amber-400"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <main>
+        <section
 }
