@@ -1,10 +1,19 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "Chybí RESEND_API_KEY." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const body = await request.json();
 
     const name = body.name?.trim() || "";
@@ -36,9 +45,8 @@ ${message}
       `.trim(),
     });
 
-    console.log("RESEND RESULT:", JSON.stringify(result, null, 2));
-
     if (result.error) {
+      console.error("RESEND ERROR:", result.error);
       return NextResponse.json(
         { error: result.error.message || "Nepodařilo se odeslat e-mail." },
         { status: 500 }
