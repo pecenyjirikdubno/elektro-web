@@ -20,9 +20,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error } = await resend.emails.send({
+    const result = await resend.emails.send({
       from: "JZ ELEKTRO <onboarding@resend.dev>",
-      to: ["pecenyjirik@gmail.com"],
+      to: ["peceny.jirik@gmail.com"],
       replyTo: email,
       subject: "Nová poptávka z webu JZ ELEKTRO",
       text: `
@@ -36,17 +36,18 @@ ${message}
       `.trim(),
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    console.log("RESEND RESULT:", JSON.stringify(result, null, 2));
+
+    if (result.error) {
       return NextResponse.json(
-        { error: "Nepodařilo se odeslat e-mail." },
+        { error: result.error.message || "Nepodařilo se odeslat e-mail." },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Server error:", err);
+    console.error("SERVER ERROR:", err);
     return NextResponse.json(
       { error: "Došlo k chybě serveru." },
       { status: 500 }
