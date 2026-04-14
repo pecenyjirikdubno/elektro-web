@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
   // Sem později vložíš token ze Search Console:
   verification: {
-    google: "googleae861fc6be16bbca.html",
+    google: "S-2H0UuhcieeqhbUJXh79jcgVqTYKFTuSECFzujxHJ0",
   },
 };
 
