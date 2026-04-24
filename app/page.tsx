@@ -310,18 +310,31 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <section
-              id="projekce"
-              className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-400/40"
-            >
-              <h3 className="text-xl font-semibold text-white">Projekce elektro</h3>
-              <p className="mt-3 text-slate-400">
-                Zpracování projektové dokumentace pro elektroinstalace, rozvody NN/VN a
-                související technická řešení.
-              </p>
-            </section>
+           <section
+  id="projekce"
+  className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-400/40"
+>
+  <div className="overflow-hidden rounded-2xl border border-slate-800">
+    <img
+      src="/images/projekce.png"
+      alt="Ukázka elektro projektové dokumentace"
+      className="h-56 w-full object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
 
-            <section
+  <h3 className="mt-5 text-xl font-semibold text-white">Projekce elektro</h3>
+  <p className="mt-3 text-slate-400">
+    Zpracování projektové dokumentace pro elektroinstalace, rozvody NN/VN a
+    související technická řešení. Připravujeme odborné návrhy s důrazem na
+    bezpečnost, funkčnost a návaznost na samotnou realizaci.
+  </p>
+
+  <ul className="mt-4 space-y-2 text-sm text-slate-300">
+    <li>• projektová dokumentace elektroinstalací</li>
+    <li>• řešení rozvodů NN a VN</li>
+    <li>• technické návrhy pro nové i rekonstruované objekty</li>
+  </ul>
+</section>
               id="revize"
               className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-400/40"
             >
