@@ -282,7 +282,7 @@ export default function HomePage() {
               </div>
 		<div>
   		<div className="text-sm text-slate-500">IČ</div>
- 		<div>24312800</div>
+ 		<div>24315800</div>
 	      </div>
             </div>
           </div>
