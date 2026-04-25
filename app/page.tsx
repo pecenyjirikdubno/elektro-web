@@ -5,6 +5,7 @@ import React from "react";
 export default function HomePage() {
   const [formState, setFormState] = React.useState<"idle" | "sending" | "success" | "error">("idle");
   const [formMessage, setFormMessage] = React.useState("");
+  const [quickPhone, setQuickPhone] = React.useState("");
 
   const [formData, setFormData] = React.useState({
     name: "",
@@ -20,23 +21,27 @@ export default function HomePage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
+  async function sendContact(payload: typeof formData) {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Nepodařilo se odeslat formulář.");
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setFormState("sending");
     setFormMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Nepodařilo se odeslat formulář.");
-      }
+      await sendContact(formData);
 
       setFormState("success");
       setFormMessage("Děkujeme, vaše poptávka byla odeslána.");
@@ -53,23 +58,62 @@ export default function HomePage() {
     }
   }
 
+  async function handleQuickSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!quickPhone.trim()) {
+      setFormState("error");
+      setFormMessage("Zadejte prosím telefon.");
+      return;
+    }
+
+    setFormState("sending");
+    setFormMessage("");
+
+    try {
+      await sendContact({
+        name: "Rychlá poptávka z webu",
+        phone: quickPhone,
+        email: "neuvedeno@jzelektro.cz",
+        service: "Zavolejte mi zpět",
+        message: `Prosím zavolat zpět na telefon: ${quickPhone}`,
+      });
+
+      setQuickPhone("");
+      setFormState("success");
+      setFormMessage("Děkujeme, ozveme se Vám zpět.");
+    } catch (error) {
+      setFormState("error");
+      setFormMessage(error instanceof Error ? error.message : "Došlo k chybě při odesílání.");
+    }
+  }
+
   const services = [
     {
+      id: "projekce",
       title: "Projekce elektro",
       text: "Projektová dokumentace elektroinstalací, rozvodů NN/VN a technická řešení pro nové i rekonstruované objekty.",
       image: "/images/projekce.png",
     },
     {
+      id: "revize",
       title: "Revize VN/NN",
       text: "Výchozí i pravidelné revize elektrických zařízení, měření a kontrola bezpečnosti provozu.",
     },
     {
+      id: "montaze",
       title: "Elektromontáže VN/NN",
       text: "Realizace silnoproudých rozvodů, kabelových tras, rozvaděčů a technologických celků.",
     },
     {
+      id: "trafostanice",
       title: "Trafostanice",
       text: "Dodávka, montáž a servis trafostanic 22/0,4 kV včetně uvedení do provozu.",
+    },
+    {
+      id: "hromosvody",
+      title: "Hromosvody a silnoproud",
+      text: "Montáž hromosvodů, silnoproudých rozvodů a souvisejících technických řešení.",
     },
   ];
 
@@ -120,10 +164,12 @@ export default function HomePage() {
             <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
               Elektromontáže VN/NN, revize elektro a trafostanice
             </h1>
-	    <p className="mt-6 text-lg text-slate-300 max-w-xl">
- 	   Elektromontáže VN/NN, trafostanice a revize elektro po celé ČR.
-	   Rychlá realizace, profesionální přístup a dlouholetá praxe.
-		</p>
+
+            <p className="mt-6 max-w-xl text-lg text-slate-300">
+              Elektromontáže VN/NN, trafostanice a revize elektro po celé ČR.
+              Rychlá realizace, profesionální přístup a dlouholetá praxe.
+            </p>
+
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Zajišťujeme projekce elektro, elektromontáže VN/NN, revize elektrických zařízení,
               dodávky trafostanic a montáž hromosvodů. Spolehlivá technická řešení pro firmy,
@@ -144,17 +190,52 @@ export default function HomePage() {
                 Zobrazit reference
               </a>
             </div>
+
+            <form
+              onSubmit={handleQuickSubmit}
+              className="mt-8 max-w-xl rounded-3xl border border-amber-400/20 bg-slate-900/90 p-5 shadow-2xl"
+            >
+              <div className="mb-3 text-sm font-semibold text-amber-300">
+                Rychlá poptávka — zavolejte mi zpět
+              </div>
+              <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
+                <input
+                  type="tel"
+                  value={quickPhone}
+                  onChange={(e) => setQuickPhone(e.target.value)}
+                  placeholder="Váš telefon"
+                  className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none placeholder:text-slate-500 focus:border-amber-400"
+                />
+                <button
+                  type="submit"
+                  disabled={formState === "sending"}
+                  className="rounded-2xl bg-amber-400 px-6 py-3 font-semibold text-slate-950 hover:bg-amber-300 disabled:opacity-70"
+                >
+                  Zavolejte mi
+                </button>
+              </div>
+            </form>
           </div>
 
           <div className="grid gap-5">
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-2xl">
               <div className="text-sm uppercase tracking-[0.25em] text-amber-300">Co děláme</div>
               <div className="mt-5 space-y-3 text-slate-200">
-                <div>⚡ Projekce elektroinstalací</div>
-                <div>⚡ Revize VN/NN</div>
-                <div>⚡ Elektromontáže VN/NN</div>
-                <div>⚡ Trafostanice 22/0,4 kV</div>
-                <div>⚡ Hromosvody a silnoproudé rozvody</div>
+                <a href="#projekce" className="block transition hover:text-amber-300">
+                  ⚡ Projekce elektroinstalací
+                </a>
+                <a href="#revize" className="block transition hover:text-amber-300">
+                  ⚡ Revize VN/NN
+                </a>
+                <a href="#montaze" className="block transition hover:text-amber-300">
+                  ⚡ Elektromontáže VN/NN
+                </a>
+                <a href="#trafostanice" className="block transition hover:text-amber-300">
+                  ⚡ Trafostanice 22/0,4 kV
+                </a>
+                <a href="#hromosvody" className="block transition hover:text-amber-300">
+                  ⚡ Hromosvody a silnoproudé rozvody
+                </a>
               </div>
             </div>
 
@@ -187,11 +268,12 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {services.map((service) => (
             <article
+              id={service.id}
               key={service.title}
-              className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-400/40"
+              className="scroll-mt-28 overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-400/40"
             >
               {service.image && (
                 <img
@@ -260,7 +342,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       <section id="kontakt" className="border-t border-amber-500/20 bg-slate-900 pb-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2">
           <div>
@@ -280,10 +362,10 @@ export default function HomePage() {
                 <div className="text-sm text-slate-500">Adresa</div>
                 <div>Dubno 91, 261 01</div>
               </div>
-		<div>
-  		<div className="text-sm text-slate-500">IČ</div>
- 		<div>24315800</div>
-	      </div>
+              <div>
+                <div className="text-sm text-slate-500">IČ</div>
+                <div>24315800</div>
+              </div>
             </div>
           </div>
 
@@ -320,6 +402,7 @@ export default function HomePage() {
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-4 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-2xl shadow-2xl hover:bg-green-400"
+        aria-label="Napsat na WhatsApp"
       >
         💬
       </a>
