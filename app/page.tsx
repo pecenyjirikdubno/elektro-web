@@ -120,7 +120,10 @@ export default function HomePage() {
             <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
               Elektromontáže VN/NN, revize elektro a trafostanice
             </h1>
-
+	    <p className="mt-6 text-lg text-slate-300 max-w-xl">
+ 	   Elektromontáže VN/NN, trafostanice a revize elektro po celé ČR.
+	   Rychlá realizace, profesionální přístup a dlouholetá praxe.
+		</p>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Zajišťujeme projekce elektro, elektromontáže VN/NN, revize elektrických zařízení,
               dodávky trafostanic a montáž hromosvodů. Spolehlivá technická řešení pro firmy,
@@ -257,7 +260,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      
       <section id="kontakt" className="border-t border-amber-500/20 bg-slate-900 pb-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2">
           <div>
@@ -277,6 +280,10 @@ export default function HomePage() {
                 <div className="text-sm text-slate-500">Adresa</div>
                 <div>Dubno 91, 261 01</div>
               </div>
+		<div>
+  		<div className="text-sm text-slate-500">IČ</div>
+ 		<div>24312800</div>
+	      </div>
             </div>
           </div>
 
