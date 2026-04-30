@@ -155,6 +155,7 @@ export default function HomePage() {
             </a>
             <a href="#kontakt" className="hover:text-amber-300">
               Kontakt
+	    <a href="/nastroje" className="hover:text-amber-300">Elektro nástroje</a>
             </a>
           </nav>
 
