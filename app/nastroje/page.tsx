@@ -2,10 +2,13 @@
 
 import React from "react";
 
+import kabely from "@/data/kabely.json";
+
 type Phase = "1f" | "3f";
 type Material = "Cu" | "Al";
 
 export default function NastrojePage() {
+  const [search, setSearch] = React.useState("");
   const [phase, setPhase] = React.useState<Phase>("3f");
   const [powerKw, setPowerKw] = React.useState("15");
   const [voltage, setVoltage] = React.useState("400");
@@ -203,7 +206,6 @@ export default function NastrojePage() {
                     : " – doporučuji zvětšit průřez"}
                 </div>
               </div>
-
               <a
                 href="/#kontakt"
                 className="block rounded-2xl bg-amber-400 px-6 py-3 text-center font-semibold text-slate-950 hover:bg-amber-300"
@@ -222,6 +224,60 @@ export default function NastrojePage() {
             jištění, impedanci poruchové smyčky, dovolené zatížení kabelu, selektivitu,
             normové požadavky a konkrétní podmínky instalace.
           </p>
+        </div>
+      </section>
+  <section className="mx-auto max-w-7xl px-6 pb-20">
+        <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+          <h2 className="text-2xl font-bold">Srovnávač kabelů</h2>
+
+          <p className="mt-2 text-slate-400">
+            Vyhledejte typ kabelu a jeho použití nebo náhradu.
+          </p>
+
+          <input
+            type="text"
+            placeholder="Zadejte např. CYKY"
+            value={search}
+            className="mt-5 w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {kabely
+              .filter((k) =>
+                k.name.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((k) => (
+                <div
+                  key={k.name}
+                  className="rounded-2xl border border-slate-800 bg-slate-950 p-5"
+                >
+                  <div className="text-lg font-bold text-amber-300">
+                    {k.name}
+                  </div>
+
+                  <div className="mt-2 text-sm text-slate-400">
+                    Materiál: {k.material}
+                  </div>
+
+                  <div className="mt-1 text-sm text-slate-400">
+                    Použití: {k.use}
+                  </div>
+
+                  <div className="mt-1 text-sm text-slate-400">
+                    Náhrada: {k.replacement}
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          {kabely.filter((k) =>
+            k.name.toLowerCase().includes(search.toLowerCase())
+          ).length === 0 && (
+            <p className="mt-6 text-sm text-slate-500">
+              Nebyl nalezen žádný kabel. Zkuste zadat například CYKY nebo AYKY.
+            </p>
+          )}
         </div>
       </section>
     </main>
