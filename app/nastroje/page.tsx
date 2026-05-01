@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-
 import kabely from "@/data/kabely.json";
 
 type Phase = "1f" | "3f";
@@ -9,6 +8,8 @@ type Material = "Cu" | "Al";
 
 export default function NastrojePage() {
   const [search, setSearch] = React.useState("");
+  const [activeType, setActiveType] = React.useState("Vše");
+
   const [phase, setPhase] = React.useState<Phase>("3f");
   const [powerKw, setPowerKw] = React.useState("15");
   const [voltage, setVoltage] = React.useState("400");
@@ -32,6 +33,7 @@ export default function NastrojePage() {
       : p / (u * cos * eta);
 
   const rho = material === "Cu" ? 0.0175 : 0.0282;
+
   const voltageDrop =
     phase === "3f"
       ? (Math.sqrt(3) * current * rho * length) / s
@@ -40,7 +42,8 @@ export default function NastrojePage() {
   const voltageDropPercent = (voltageDrop / u) * 100;
 
   const breakers = [6, 10, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250];
-  const recommendedBreaker = breakers.find((b) => b >= current) || breakers[breakers.length - 1];
+  const recommendedBreaker =
+    breakers.find((b) => b >= current) || breakers[breakers.length - 1];
 
   const isValid =
     Number.isFinite(current) &&
@@ -48,238 +51,149 @@ export default function NastrojePage() {
     Number.isFinite(voltageDrop) &&
     voltageDrop >= 0;
 
+  // ================= FILTER =================
+
+  const cableTypes = ["Vše", ...Array.from(new Set(kabely.map((k) => k.type)))];
+
+  const filteredKabely = kabely.filter((k) => {
+    const query = search.toLowerCase();
+
+    const matchesSearch =
+      k.name.toLowerCase().includes(query) ||
+      k.type.toLowerCase().includes(query) ||
+      k.use.toLowerCase().includes(query) ||
+      k.description.toLowerCase().includes(query) ||
+      k.replacement.toLowerCase().includes(query);
+
+    const matchesType = activeType === "Vše" || k.type === activeType;
+
+    return matchesSearch && matchesType;
+  });
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+
+      {/* HEADER */}
       <header className="border-b border-amber-500/20 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <a href="/" className="flex items-center gap-3">
-            <img src="/logo.svg" alt="JZ ELEKTRO" className="h-11 w-11 rounded-2xl bg-white p-1" />
+            <img src="/logo.svg" className="h-11 w-11 bg-white rounded-xl p-1" />
             <div>
-              <div className="text-lg font-bold">JZ ELEKTRO</div>
-              <div className="text-xs uppercase tracking-[0.25em] text-slate-400">
-                Elektro nástroje
-              </div>
+              <div className="font-bold">JZ ELEKTRO</div>
+              <div className="text-xs text-slate-400">Elektro nástroje</div>
             </div>
           </a>
 
-          <a
-            href="/#kontakt"
-            className="rounded-2xl bg-amber-400 px-5 py-2 text-sm font-semibold text-slate-950 hover:bg-amber-300"
-          >
+          <a href="/#kontakt" className="bg-amber-400 px-5 py-2 rounded-xl text-black font-bold">
             Konzultace
           </a>
         </div>
       </header>
 
-      <section className="relative overflow-hidden border-b border-slate-800">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.20),transparent_30%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-16">
-          <div className="max-w-3xl">
-            <div className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              Výpočtové pomůcky
-            </div>
-            <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">
-              Elektro nástroje pro orientační návrh
-            </h1>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Spočítejte orientační proud stroje, úbytek napětí vedení a doporučenou
-              hodnotu jištění. Výpočet je informativní a nenahrazuje projektovou dokumentaci
-              ani revizi elektrického zařízení.
-            </p>
-          </div>
-        </div>
+      {/* HERO */}
+      <section className="px-6 py-16 max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold">
+          Elektro výpočty a nástroje
+        </h1>
+        <p className="mt-4 text-slate-400 max-w-xl">
+          Výpočty proudu, úbytku napětí a srovnávač kabelů pro rychlou orientaci.
+        </p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:grid-cols-[1fr_0.85fr]">
-        <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-          <h2 className="text-2xl font-bold">Vstupní údaje</h2>
+      {/* KALKULAČKA */}
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-16 lg:grid-cols-[1fr_0.85fr]">
 
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Soustava</span>
-              <select
-                value={phase}
-                onChange={(e) => setPhase(e.target.value as Phase)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              >
-                <option value="3f">3f / 400 V</option>
-                <option value="1f">1f / 230 V</option>
-              </select>
-            </label>
+        {/* INPUT */}
+        <div className="bg-slate-900 p-6 rounded-3xl">
+          <h2 className="text-xl font-bold">Vstupní údaje</h2>
 
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Výkon stroje [kW]</span>
-              <input
-                value={powerKw}
-                onChange={(e) => setPowerKw(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Napětí [V]</span>
-              <input
-                value={voltage}
-                onChange={(e) => setVoltage(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">cos φ</span>
-              <input
-                value={cosPhi}
-                onChange={(e) => setCosPhi(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Účinnost η</span>
-              <input
-                value={efficiency}
-                onChange={(e) => setEfficiency(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Materiál vodiče</span>
-              <select
-                value={material}
-                onChange={(e) => setMaterial(e.target.value as Material)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              >
-                <option value="Cu">Cu</option>
-                <option value="Al">Al</option>
-              </select>
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Délka vedení [m]</span>
-              <input
-                value={lengthM}
-                onChange={(e) => setLengthM(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
-
-            <label className="block">
-              <span className="mb-2 block text-sm text-slate-400">Průřez vodiče [mm²]</span>
-              <input
-                value={crossSection}
-                onChange={(e) => setCrossSection(e.target.value)}
-                className="w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-              />
-            </label>
+          <div className="mt-6 grid gap-4">
+            <input value={powerKw} onChange={(e) => setPowerKw(e.target.value)} placeholder="Výkon kW" className="p-3 rounded-xl bg-slate-950"/>
+            <input value={voltage} onChange={(e) => setVoltage(e.target.value)} placeholder="Napětí V" className="p-3 rounded-xl bg-slate-950"/>
+            <input value={cosPhi} onChange={(e) => setCosPhi(e.target.value)} placeholder="cos φ" className="p-3 rounded-xl bg-slate-950"/>
+            <input value={efficiency} onChange={(e) => setEfficiency(e.target.value)} placeholder="Účinnost" className="p-3 rounded-xl bg-slate-950"/>
+            <input value={lengthM} onChange={(e) => setLengthM(e.target.value)} placeholder="Délka m" className="p-3 rounded-xl bg-slate-950"/>
+            <input value={crossSection} onChange={(e) => setCrossSection(e.target.value)} placeholder="Průřez mm2" className="p-3 rounded-xl bg-slate-950"/>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-amber-400/20 bg-slate-900 p-6 shadow-2xl">
-          <h2 className="text-2xl font-bold">Výsledek</h2>
+        {/* OUTPUT */}
+        <div className="bg-slate-900 p-6 rounded-3xl">
+          <h2 className="text-xl font-bold">Výsledek</h2>
 
-          {isValid ? (
-            <div className="mt-6 space-y-5">
-              <div className="rounded-2xl bg-slate-950 p-5">
-                <div className="text-sm text-slate-400">Orientační proud</div>
-                <div className="mt-1 text-4xl font-bold text-amber-300">
-                  {current.toFixed(1)} A
-                </div>
+          {isValid && (
+            <div className="mt-6 space-y-4">
+              <div>Proud: <b>{current.toFixed(1)} A</b></div>
+              <div>Jistič: <b>{recommendedBreaker} A</b></div>
+              <div>
+                Úbytek: <b>{voltageDrop.toFixed(2)} V</b> ({voltageDropPercent.toFixed(2)} %)
               </div>
-
-              <div className="rounded-2xl bg-slate-950 p-5">
-                <div className="text-sm text-slate-400">Doporučené jištění</div>
-                <div className="mt-1 text-4xl font-bold text-amber-300">
-                  {recommendedBreaker} A
-                </div>
-              </div>
-
-              <div className="rounded-2xl bg-slate-950 p-5">
-                <div className="text-sm text-slate-400">Úbytek napětí</div>
-                <div className="mt-1 text-3xl font-bold">
-                  {voltageDrop.toFixed(2)} V
-                </div>
-                <div className={voltageDropPercent <= 3 ? "mt-1 text-green-400" : "mt-1 text-red-400"}>
-                  {voltageDropPercent.toFixed(2)} %
-                  {voltageDropPercent <= 3
-                    ? " – orientačně v pořádku"
-                    : " – doporučuji zvětšit průřez"}
-                </div>
-              </div>
-              <a
-                href="/#kontakt"
-                className="block rounded-2xl bg-amber-400 px-6 py-3 text-center font-semibold text-slate-950 hover:bg-amber-300"
-              >
-                Chci ověřit návrh odborně
-              </a>
             </div>
-          ) : (
-            <p className="mt-6 text-red-400">
-              Zkontrolujte prosím zadané hodnoty.
-            </p>
-          )}
-
-          <p className="mt-6 text-sm leading-6 text-slate-500">
-            Výpočet je orientační. Skutečný návrh musí zohlednit způsob uložení,
-            jištění, impedanci poruchové smyčky, dovolené zatížení kabelu, selektivitu,
-            normové požadavky a konkrétní podmínky instalace.
-          </p>
-        </div>
-      </section>
-  <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-          <h2 className="text-2xl font-bold">Srovnávač kabelů</h2>
-
-          <p className="mt-2 text-slate-400">
-            Vyhledejte typ kabelu a jeho použití nebo náhradu.
-          </p>
-
-          <input
-            type="text"
-            placeholder="Zadejte např. CYKY"
-            value={search}
-            className="mt-5 w-full rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-amber-400"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {kabely
-              .filter((k) =>
-                k.name.toLowerCase().includes(search.toLowerCase())
-              )
-              .map((k) => (
-                <div
-                  key={k.name}
-                  className="rounded-2xl border border-slate-800 bg-slate-950 p-5"
-                >
-                  <div className="text-lg font-bold text-amber-300">
-                    {k.name}
-                  </div>
-
-                  <div className="mt-2 text-sm text-slate-400">
-                    Materiál: {k.material}
-                  </div>
-
-                  <div className="mt-1 text-sm text-slate-400">
-                    Použití: {k.use}
-                  </div>
-
-                  <div className="mt-1 text-sm text-slate-400">
-                    Náhrada: {k.replacement}
-                  </div>
-                </div>
-              ))}
-          </div>
-
-          {kabely.filter((k) =>
-            k.name.toLowerCase().includes(search.toLowerCase())
-          ).length === 0 && (
-            <p className="mt-6 text-sm text-slate-500">
-              Nebyl nalezen žádný kabel. Zkuste zadat například CYKY nebo AYKY.
-            </p>
           )}
         </div>
       </section>
+
+      {/* ================= KABELY ================= */}
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+
+        <h2 className="text-3xl font-bold">Srovnávač kabelů</h2>
+
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Hledat kabel..."
+          className="mt-4 w-full p-3 rounded-xl bg-slate-900"
+        />
+
+        {/* FILTER */}
+        <div className="mt-4 flex gap-2 flex-wrap">
+          {cableTypes.map((type) => (
+            <button
+              key={type}
+              onClick={() => setActiveType(type)}
+              className={`px-4 py-2 rounded-xl ${
+                activeType === type ? "bg-amber-400 text-black" : "bg-slate-800"
+              }`}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+
+        {/* GRID */}
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {filteredKabely.map((k) => (
+            <div key={k.name} className="bg-slate-900 p-5 rounded-2xl">
+
+              {k.image && (
+                <img src={k.image} className="h-20 mx-auto mb-3"/>
+              )}
+
+              <div className="font-bold text-lg">{k.name}</div>
+              <div className="text-sm text-slate-400">{k.type}</div>
+
+              <div className="mt-2 text-sm">{k.use}</div>
+
+              <div className="mt-3 text-xs text-slate-400">
+                {k.voltage} • {k.material}
+              </div>
+
+              <div className="mt-2 text-xs text-amber-300">
+                {k.replacement}
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+        {filteredKabely.length === 0 && (
+          <p className="mt-6 text-slate-500">
+            Nic nenalezeno
+          </p>
+        )}
+
+      </section>
+
     </main>
   );
 }
