@@ -104,21 +104,37 @@ export default function HomePage() {
       id: "revize",
       title: "Revize VN/NN",
       text: "Výchozí i pravidelné revize elektrických zařízení.",
+      image: "/images/revize.png",
     },
     {
       id: "montaze",
       title: "Elektromontáže VN/NN",
-      text: "Realizace silnoproudých rozvodů a kabelových tras.",
+      text: "Realizace silnoproudých rozvodů, kabelových tras, rozvaděčů a technologických celků.",
+      image: "/images/montaze.png",
     },
     {
       id: "trafostanice",
       title: "Trafostanice",
-      text: "Dodávka a montáž trafostanic 22/0,4 kV.",
+      text: "Dodávka, montáž a servis trafostanic 22/0,4 kV.",
+      image: "/images/trafostanice.png",
     },
     {
       id: "hromosvody",
       title: "Hromosvody",
-      text: "Montáž hromosvodů a silnoproudých rozvodů.",
+      text: "Montáž hromosvodů, uzemnění a souvisejících silnoproudých rozvodů.",
+      image: "/images/hromosvod.png",
+    },
+    {
+      id: "naradi",
+      title: "Opravy el. nářadí",
+      text: "Servis, diagnostika a opravy elektrického nářadí pro řemeslníky, firmy i provozy.",
+      image: "/images/naradi.png",
+    },
+    {
+      id: "motory",
+      title: "Opravy elektromotorů a čerpadel",
+      text: "Diagnostika, opravy a servis elektromotorů, čerpadel a souvisejících pohonů.",
+      image: "/images/motor.png",
     },
   ];
 
@@ -189,18 +205,22 @@ export default function HomePage() {
       <section id="sluzby" className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="mb-10 text-3xl font-bold">Co nabízíme</h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((s) => (
-            <div id={s.id} key={s.id} className="rounded-xl bg-slate-900 p-6 scroll-mt-28">
-              {s.image && (
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  className="mb-5 h-44 w-full rounded-xl object-cover"
-                />
-              )}
-              <h3 className="text-xl font-bold">{s.title}</h3>
-              <p className="mt-3 text-slate-400">{s.text}</p>
+            <div
+              id={s.id}
+              key={s.id}
+              className="scroll-mt-28 overflow-hidden rounded-2xl bg-slate-900"
+            >
+              <img
+                src={s.image}
+                alt={s.title}
+                className="h-52 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold">{s.title}</h3>
+                <p className="mt-3 text-slate-400">{s.text}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -295,6 +315,21 @@ export default function HomePage() {
               onChange={handleChange}
               className="w-full rounded-xl bg-slate-950 p-3 outline-none focus:ring-2 focus:ring-amber-400"
             />
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full rounded-xl bg-slate-950 p-3 outline-none focus:ring-2 focus:ring-amber-400"
+            >
+              <option>Projekce elektro</option>
+              <option>Revize VN/NN</option>
+              <option>Elektromontáže VN/NN</option>
+              <option>Trafostanice</option>
+              <option>Hromosvody</option>
+              <option>Opravy el. nářadí</option>
+              <option>Opravy elektromotorů a čerpadel</option>
+              <option>Jiná poptávka</option>
+            </select>
             <textarea
               name="message"
               placeholder="Zpráva"
