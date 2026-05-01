@@ -1,0 +1,42 @@
+[
+  {
+    "name": "CYKY",
+    "type": "Instalační",
+    "description": "Pevný instalační kabel",
+    "use": "Pro pevné uložení v budovách",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "replacement": "NYY",
+    "image": "/kabely/cyky.svg"
+  },
+  {
+    "name": "AYKY",
+    "type": "Silové",
+    "description": "Silový kabel s Al jádry",
+    "use": "Zemní uložení, venkovní vedení",
+    "material": "Al",
+    "voltage": "0,6/1 kV",
+    "replacement": "NAYY",
+    "image": "/kabely/ayky.svg"
+  },
+  {
+    "name": "H07RN-F",
+    "type": "Ohebný",
+    "description": "Gumový kabel do náročného prostředí",
+    "use": "Stavby, průmysl, venkovní použití",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "replacement": "CGTG",
+    "image": "/kabely/h07rn-f.svg"
+  },
+  {
+    "name": "CYSY",
+    "type": "Ohebný",
+    "description": "PVC ohebný kabel",
+    "use": "Běžné přívody",
+    "material": "Cu",
+    "voltage": "300/500 V",
+    "replacement": "H05VV-F",
+    "image": "/kabely/cysy.svg"
+  }
+]
