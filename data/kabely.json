@@ -1,42 +1,74 @@
 [
   {
     "name": "CYKY",
-    "type": "Instalační",
-    "description": "Pevný instalační kabel",
-    "use": "Pro pevné uložení v budovách",
+    "type": "Silový kabel",
+    "use": "Pevné uložení v zemi, betonu i vnitřních rozvodech",
     "material": "Cu",
-    "voltage": "450/750 V",
-    "replacement": "NYY",
-    "image": "/kabely/cyky.svg"
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cyky.png",
+    "replacement": "NYY-J"
   },
   {
     "name": "AYKY",
-    "type": "Silové",
-    "description": "Silový kabel s Al jádry",
-    "use": "Zemní uložení, venkovní vedení",
+    "type": "Silový kabel",
+    "use": "Hlavní přívody v zemi (hliník)",
     "material": "Al",
     "voltage": "0,6/1 kV",
-    "replacement": "NAYY",
-    "image": "/kabely/ayky.svg"
-  },
-  {
-    "name": "H07RN-F",
-    "type": "Ohebný",
-    "description": "Gumový kabel do náročného prostředí",
-    "use": "Stavby, průmysl, venkovní použití",
-    "material": "Cu",
-    "voltage": "450/750 V",
-    "replacement": "CGTG",
-    "image": "/kabely/h07rn-f.svg"
+    "image": "/kabely/ayky.png",
+    "replacement": "NAYY-J"
   },
   {
     "name": "CYSY",
-    "type": "Ohebný",
-    "description": "PVC ohebný kabel",
-    "use": "Běžné přívody",
+    "type": "Ovládací kabel",
+    "use": "Řízení, signalizace, slaboproud",
     "material": "Cu",
     "voltage": "300/500 V",
-    "replacement": "H05VV-F",
-    "image": "/kabely/cysy.svg"
+    "image": "/kabely/cysy.png",
+    "replacement": "JY(St)Y"
+  },
+  {
+    "name": "H07RN-F",
+    "type": "Pryžový kabel",
+    "use": "Staveniště, venkovní použití, vysoká odolnost",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "image": "/kabely/h07rn-f.png",
+    "replacement": "CGTG"
+  },
+  {
+    "name": "LY",
+    "type": "Vodič",
+    "use": "Rozvaděče, propojení zařízení",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "image": "/kabely/ly.png",
+    "replacement": "H07V-U"
+  },
+  {
+    "name": "CYKYLo",
+    "type": "Bezhalogenový kabel",
+    "use": "Interiéry, únikové cesty",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cykyl0.png",
+    "replacement": "NHXH"
+  },
+  {
+    "name": "SYKFY",
+    "type": "Datový kabel",
+    "use": "Telefonní a datové rozvody",
+    "material": "Cu",
+    "voltage": "slaboproud",
+    "image": "/kabely/sykfy.png",
+    "replacement": "UTP/STP"
+  },
+  {
+    "name": "CGTG",
+    "type": "Gumový kabel",
+    "use": "Těžké provozy, doly, průmysl",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cgtg.png",
+    "replacement": "H07RN-F"
   }
 ]
