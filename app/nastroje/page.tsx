@@ -62,7 +62,6 @@ export default function NastrojePage() {
       k.name.toLowerCase().includes(query) ||
       k.type.toLowerCase().includes(query) ||
       k.use.toLowerCase().includes(query) ||
-      k.description.toLowerCase().includes(query) ||
       k.replacement.toLowerCase().includes(query);
 
     const matchesType = activeType === "Vše" || k.type === activeType;
