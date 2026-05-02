@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { services } from "@/data/sluzby";
 
 export default function HomePage() {
   const [formState, setFormState] = React.useState<
@@ -93,51 +94,6 @@ export default function HomePage() {
     }
   }
 
-  const services = [
-    {
-      id: "projekce",
-      title: "Projekce elektro",
-      text: "Projektová dokumentace elektroinstalací, rozvodů NN/VN a technická řešení.",
-      image: "/images/projekce.png",
-    },
-    {
-      id: "revize",
-      title: "Revize VN/NN",
-      text: "Výchozí i pravidelné revize elektrických zařízení.",
-      image: "/images/revize.png",
-    },
-    {
-      id: "montaze",
-      title: "Elektromontáže VN/NN",
-      text: "Realizace silnoproudých rozvodů, kabelových tras, rozvaděčů a technologických celků.",
-      image: "/images/montaze.png",
-    },
-    {
-      id: "trafostanice",
-      title: "Trafostanice",
-      text: "Dodávka, montáž a servis trafostanic 22/0,4 kV.",
-      image: "/images/trafostanice.png",
-    },
-    {
-      id: "hromosvody",
-      title: "Hromosvody",
-      text: "Montáž hromosvodů, uzemnění a souvisejících silnoproudých rozvodů.",
-      image: "/images/hromosvod.png",
-    },
-    {
-      id: "naradi",
-      title: "Opravy el. nářadí",
-      text: "Servis, diagnostika a opravy elektrického nářadí pro řemeslníky, firmy i provozy.",
-      image: "/images/naradi.png",
-    },
-    {
-      id: "motory",
-      title: "Opravy elektromotorů a čerpadel",
-      text: "Diagnostika, opravy a servis elektromotorů, čerpadel a souvisejících pohonů.",
-      image: "/images/motor.png",
-    },
-  ];
-
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <header className="sticky top-0 z-50 border-b border-amber-500/20 bg-slate-950/95 backdrop-blur">
@@ -155,18 +111,10 @@ export default function HomePage() {
           </a>
 
           <nav className="hidden gap-5 text-sm text-slate-300 md:flex">
-            <a href="#home" className="hover:text-amber-300">
-              Úvod
-            </a>
-            <a href="#sluzby" className="hover:text-amber-300">
-              Co nabízíme
-            </a>
-            <a href="#reference" className="hover:text-amber-300">
-              Reference
-            </a>
-            <a href="#kontakt" className="hover:text-amber-300">
-              Kontakt
-            </a>
+            <a href="#home" className="hover:text-amber-300">Úvod</a>
+            <a href="#sluzby" className="hover:text-amber-300">Co nabízíme</a>
+            <a href="#reference" className="hover:text-amber-300">Reference</a>
+            <a href="#kontakt" className="hover:text-amber-300">Kontakt</a>
             <a href="/nastroje" className="text-amber-300 hover:text-amber-200">
               Elektro nástroje
             </a>
@@ -206,22 +154,28 @@ export default function HomePage() {
         <h2 className="mb-10 text-3xl font-bold">Co nabízíme</h2>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((s) => (
-            <div
-              id={s.id}
-              key={s.id}
-              className="scroll-mt-28 overflow-hidden rounded-2xl bg-slate-900"
+          {services.map((service) => (
+            <a
+              id={service.id}
+              key={service.id}
+              href={`/sluzby/${service.id}`}
+              className="group scroll-mt-28 overflow-hidden rounded-2xl bg-slate-900 transition hover:-translate-y-1 hover:shadow-2xl"
             >
               <img
-                src={s.image}
-                alt={s.title}
-                className="h-52 w-full object-cover"
+                src={service.image}
+                alt={service.title}
+                className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold">{s.title}</h3>
-                <p className="mt-3 text-slate-400">{s.text}</p>
+                <h3 className="text-xl font-bold group-hover:text-amber-300">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-slate-400">{service.shortText}</p>
+                <div className="mt-5 text-sm font-semibold text-amber-300">
+                  Zobrazit detail →
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -321,13 +275,9 @@ export default function HomePage() {
               onChange={handleChange}
               className="w-full rounded-xl bg-slate-950 p-3 outline-none focus:ring-2 focus:ring-amber-400"
             >
-              <option>Projekce elektro</option>
-              <option>Revize VN/NN</option>
-              <option>Elektromontáže VN/NN</option>
-              <option>Trafostanice</option>
-              <option>Hromosvody</option>
-              <option>Opravy el. nářadí</option>
-              <option>Opravy elektromotorů a čerpadel</option>
+              {services.map((service) => (
+                <option key={service.id}>{service.title}</option>
+              ))}
               <option>Jiná poptávka</option>
             </select>
             <textarea
