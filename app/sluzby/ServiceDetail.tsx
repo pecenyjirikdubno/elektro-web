@@ -1,9 +1,23 @@
+"use client";
+
 type ServiceDetailProps = {
   title: string;
   subtitle: string;
   image: string;
   paragraphs: string[];
 };
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function trackEvent(name: string, params: Record<string, unknown> = {}) {
+  if (typeof window !== "undefined") {
+    window.gtag?.("event", name, params);
+  }
+}
 
 export default function ServiceDetail({
   title,
@@ -29,6 +43,7 @@ export default function ServiceDetail({
 
           <a
             href="/#kontakt"
+            onClick={() => trackEvent("service_detail_header_contact_click", { service: title })}
             className="rounded-xl bg-amber-400 px-5 py-2 font-bold text-black hover:bg-amber-300"
           >
             Poptávka
@@ -67,6 +82,7 @@ export default function ServiceDetail({
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="/#kontakt"
+              onClick={() => trackEvent("service_detail_contact_click", { service: title })}
               className="rounded-xl bg-amber-400 px-6 py-3 font-bold text-black hover:bg-amber-300"
             >
               Poptat službu
@@ -74,9 +90,18 @@ export default function ServiceDetail({
 
             <a
               href="tel:+420720298279"
+              onClick={() => trackEvent("service_detail_phone_click", { service: title })}
               className="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:border-amber-400"
             >
               Zavolat
+            </a>
+
+            <a
+              href="/nastroje"
+              onClick={() => trackEvent("service_detail_tools_click", { service: title })}
+              className="rounded-xl border border-amber-400/60 px-6 py-3 font-bold text-amber-300 hover:bg-amber-400 hover:text-black"
+            >
+              Spočítat kabel / výkon
             </a>
           </div>
         </div>
