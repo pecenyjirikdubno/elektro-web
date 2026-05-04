@@ -46,12 +46,12 @@
   },
   {
     "name": "CYKYLo",
-    "type": "Bezhalogenový kabel",
-    "use": "Interiéry, únikové cesty",
+    "type": "Instalační kabel plochý",
+    "use": "Pevné uložení betonu, zdivu i vnitřních rozvodech",
     "material": "Cu",
     "voltage": "0,6/1 kV",
     "image": "/kabely/cykyl.png",
-    "replacement": "NHXH"
+    "replacement": "CYKY"
   },
   {
     "name": "SYKFY",
@@ -71,4 +71,15 @@
     "image": "/kabely/cgtg.png",
     "replacement": "H07RN-F"
   }
+
+ {
+    "name": "H05RR-F",
+    "type": "Gumový kabel",
+    "use": "Lehčí zatížení, průmysl",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/h05rr-f.png",
+    "replacement": "CGSG"
+  }
+
 ]
