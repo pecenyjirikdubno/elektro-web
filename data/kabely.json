@@ -97,7 +97,23 @@
     "voltage": "0,6/1 kV",
     "image": "/kabely/cya.png",
     "replacement": "H05V-K/H07V-K"
+  },
+ {
+    "name": "CYA",
+    "type": "PVC kabel",
+    "use": "Pohyblivé uložení, rozvaděče",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cya.png",
+    "replacement": "H05V-K/H07V-K"
+  },
+ {
+    "name": "N2HX",
+    "type": "Kabel se zvýšenou odolností při požáru - bezhalogenový",
+    "use": "Pevné uložení, rozvaděče, budovy, unikové cesty",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/c2hx.png",
+    "replacement": "Není přímá náhrada"
   }
-
-
 ]
