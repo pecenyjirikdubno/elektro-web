@@ -6,7 +6,7 @@
     "material": "Cu",
     "voltage": "0,6/1 kV",
     "image": "/kabely/cyky.png",
-    "replacement": "NYY-J"
+    "replacement": "Není přímý Hxx ekvivalent, v odůvodněných případech CYKYLo"
   },
   {
     "name": "AYKY",
@@ -15,7 +15,7 @@
     "material": "Al",
     "voltage": "0,6/1 kV",
     "image": "/kabely/ayky.png",
-    "replacement": "NAYY-J"
+    "replacement": "Není přímý Hxx ekvivalent, lze využít NAYY-J"
   },
   {
     "name": "CYSY",
@@ -24,7 +24,7 @@
     "material": "Cu",
     "voltage": "300/500 V",
     "image": "/kabely/cysy.png",
-    "replacement": "JY(St)Y"
+    "replacement": "H05VV-F"
   },
   {
     "name": "H07RN-F",
@@ -51,7 +51,7 @@
     "material": "Cu",
     "voltage": "0,6/1 kV",
     "image": "/kabely/cykyl.png",
-    "replacement": "CYKY"
+    "replacement": "Není přímá Hxx náhrada"
   },
   {
     "name": "SYKFY",
@@ -105,6 +105,6 @@
     "material": "Cu",
     "voltage": "0,6/1 kV",
     "image": "/kabely/n2hx.png",
-    "replacement": "Není přímá náhrada"
+    "replacement": "Není přímá Hxx náhrada"
   }
 ]
