@@ -79,5 +79,25 @@
     "voltage": "0,6/1 kV",
     "image": "/kabely/h05rr-f.png",
     "replacement": "CGSG"
+  },
+ {
+    "name": "CY",
+    "type": "PVC jednožilový kabel",
+    "use": "Pevné instalace",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cy.png",
+    "replacement": "H05V-U/H07V-U"
+  },
+ {
+    "name": "CYA",
+    "type": "PVC kabel",
+    "use": "Pohyblivé uložení, rozvaděče",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cya.png",
+    "replacement": "H05V-K/H07V-K"
   }
+
+
 ]
