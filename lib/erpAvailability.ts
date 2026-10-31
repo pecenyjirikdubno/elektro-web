@@ -2,12 +2,17 @@ import "server-only";
 
 export type ErpAvailability = "Skladem" | "Na dotaz";
 
-type ErpAvailabilityResponse = {
+type Snapshot = {
+  schemaVersion: number;
+  source: string;
+  generatedAt: string;
   products: Array<{
     erpCode: string;
     availability: ErpAvailability;
   }>;
 };
+
+const STORAGE_KEY = "jz:eshop:availability:v1";
 
 export async function getErpAvailability(
   erpCodes: string[],
@@ -21,44 +26,65 @@ export async function getErpAvailability(
     return fallback;
   }
 
-  const apiUrl = process.env.JZ_ERP_API_URL;
-  const apiKey = process.env.JZ_ERP_ESHOP_API_KEY;
+  const redisUrl = process.env.KV_REST_API_URL;
+  const redisToken = process.env.KV_REST_API_TOKEN;
 
-  if (!apiUrl || !apiKey) {
+  if (!redisUrl || !redisToken) {
     return fallback;
   }
 
   try {
-    const url = new URL(
-      `${apiUrl.replace(/\/+$/, "")}/api/v1/eshop/availability`,
-    );
-
-    for (const code of codes) {
-      url.searchParams.append("erpCode", code);
-    }
-
-    const response = await fetch(url.toString(), {
-      method: "GET",
+    const response = await fetch(redisUrl.replace(/\/+$/, ""), {
+      method: "POST",
       headers: {
-        "X-ESHOP-API-KEY": apiKey,
+        Authorization: `Bearer ${redisToken}`,
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify(["GET", STORAGE_KEY]),
       cache: "no-store",
-      signal: AbortSignal.timeout(3000),
+      signal: AbortSignal.timeout(5000),
     });
 
     if (!response.ok) {
       return fallback;
     }
 
-    const data = (await response.json()) as ErpAvailabilityResponse;
-    const result = { ...fallback };
+    const data = (await response.json()) as {
+      result?: unknown;
+      error?: string;
+    };
 
-    if (!Array.isArray(data.products)) {
+    if (data.error || typeof data.result !== "string") {
       return fallback;
     }
 
-    for (const product of data.products) {
+    const snapshot = JSON.parse(data.result) as Snapshot;
+
+    if (
+      snapshot.schemaVersion !== 1 ||
+      snapshot.source !== "jz-erp" ||
+      !Array.isArray(snapshot.products)
+    ) {
+      return fallback;
+    }
+
+    const generated = Date.parse(snapshot.generatedAt);
+    const age = Date.now() - generated;
+
+    if (
+      !Number.isFinite(generated) ||
+      age < -5 * 60_000 ||
+      age > 24 * 60 * 60_000
+    ) {
+      return fallback;
+    }
+
+    const result = { ...fallback };
+
+    for (const product of snapshot.products) {
       if (
+        product &&
+        typeof product.erpCode === "string" &&
         Object.prototype.hasOwnProperty.call(result, product.erpCode) &&
         (product.availability === "Skladem" ||
           product.availability === "Na dotaz")
