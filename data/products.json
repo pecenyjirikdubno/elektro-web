@@ -1,0 +1,504 @@
+[
+  {
+    "id": 1,
+    "name": "kabel CYKY-J 3x1,5",
+    "sku": "JZ00637",
+    "ean": "8591043356411",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje hnědý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 2,
+    "name": "kabel CYKY-J 3x2,5",
+    "sku": "JZ00003",
+    "ean": "8591043356343",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje hnědý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 3,
+    "name": "kabel CYKY-J 5x1,5",
+    "sku": "JZ00638",
+    "ean": "8591043356473",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 4,
+    "name": "KABEL CYKY-J 5x4",
+    "sku": "JZ00008",
+    "ean": "8591043356862",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 5,
+    "name": "Kabel Cyky-J 5x6 kabel",
+    "sku": "JZ00288",
+    "ean": "8591043356374",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 6,
+    "name": "kabel CYKY-O 3x1,5",
+    "sku": "JZ00009",
+    "ean": "8591043357401",
+    "category": "Kabely/Pro pevné uložení",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+ vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 7,
+    "name": "kabel CYKY-J 4x4",
+    "sku": "JZ00006",
+    "ean": "8591043356800",
+    "category": "Ostatní",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý++zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 8,
+    "name": "kabel CYKY-J 4x6",
+    "sku": "JZ00007",
+    "ean": "8591043357098",
+    "category": "Ostatní",
+    "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 9,
+    "name": "CYSY 3Gx1,5 kabel",
+    "sku": "JZ00289",
+    "ean": "8595067598048",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný kabel 3x1,5 s ​PVC pláštěm do suchého prostředí pro střední mechanické namáhání k ​pohyblivým přívodům. Bílý plášť, kabel obsahuje hnědý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 10,
+    "name": "KABEL TITANEX H07RN-F 4G1,5",
+    "sku": "",
+    "ean": "8594199273021",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný gumový kabel 4x1,5 do 750V pro těžké mechanické zatížení, laněné měděné jádro, pryžová izolace (CGTG). Černý plášť, kabel obsahuje černý+hnědý+šedý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 11,
+    "name": "KABEL TITANEX H07RN-F 3G1,5",
+    "sku": "",
+    "ean": "8594199272918",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný gumový kabel 3x1,5 do 750V pro těžké mechanické zatížení, laněné měděné jádro, pryžová izolace (CGTG). Černý plášť, kabel obsahuje hnědý+modrý+zelenožlutý vodič",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 12,
+    "name": "KABEL TITANEX H07RN-F 5G1,5",
+    "sku": "",
+    "ean": "",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný gumový kabel 5x1,5 do 750V pro těžké mechanické zatížení, laněné měděné jádro, pryžová izolace (CGTG)",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 13,
+    "name": "CYA 4mm žz",
+    "sku": "JZ00040",
+    "ean": "2090000000283",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný vodič pro pevné uložení jako propojovací vodič do trubek, přístrojů a ​rozvaděčů. Barva žluto/zelená",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 14,
+    "name": "VODIC CYA 10 ZLUTOZELENA H07V-K",
+    "sku": "",
+    "ean": "8595067585901",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný vodič pro pevné uložení jako propojovací vodič do trubek, přístrojů a ​rozvaděčů. Barva žluto/zelená",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 15,
+    "name": "VODIC CYA 6 ZLUTOZELENA H07V-K",
+    "sku": "",
+    "ean": "8595067503967",
+    "category": "Kabely/Pohyblivé přívody",
+    "description": "Ohebný vodič pro pevné uložení jako propojovací vodič do trubek, přístrojů a ​rozvaděčů. Barva žluto/zelená",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 16,
+    "name": "JISTIČ LTN-25B-3",
+    "sku": "1249597",
+    "ean": "8590125417743",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628985_LTN-25B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 17,
+    "name": "JISTIČ LTN-20B-3",
+    "sku": "1249596",
+    "ean": "8590125417736",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628983_LTN-20B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 18,
+    "name": "JISTIČ LTN-16B-3",
+    "sku": "1249595",
+    "ean": "8590125417729",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628978_LTN-16B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 19,
+    "name": "JISTIČ LTN-10B-3",
+    "sku": "1249593",
+    "ean": "8590125417705",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628975_LTN-10B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 20,
+    "name": "JISTIC LTN-10B-1",
+    "sku": "1249464",
+    "ean": "8590125416388",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628518_LTN-10B-1.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 21,
+    "name": "JISTIC LTN-6B-1",
+    "sku": "1249463",
+    "ean": "8590125416364",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628542_LTN-6B-1.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 22,
+    "name": "JISTIC LTN-16B-1",
+    "sku": "1249466",
+    "ean": "8590125416401",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628522_LTN-16B-1.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 23,
+    "name": "JISTIC LTN-32B-3",
+    "sku": "1249598",
+    "ean": "8590125417750",
+    "category": "Přístroje/Jističe/10kA",
+    "description": "",
+    "image": "/produkty/628989_LTN-32B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 24,
+    "name": "KOMBICHRANIC LMF-10B-1N-030A 1MODUL",
+    "sku": "1172385",
+    "ean": "8590125466635",
+    "category": "Přístroje/Jističochrániče(6 kA)/do 16 A",
+    "description": "In 10 A, Ue AC 230 V, charakteristika B, Idn 30 mA, 1+N-pól, šířka 1 modul, Icn 6 kA, typ A",
+    "image": "/produkty/628262_LMF-10B-1N-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 25,
+    "name": "KOMBICHRANIC LMF-16B-1N-030A 1MODUL",
+    "sku": "1172389",
+    "ean": "8590125466659",
+    "category": "Přístroje/Jističochrániče(6 kA)/do 16 A",
+    "description": "In 16 A, Ue AC 230 V, charakteristika B, Idn 30 mA, 1+N-pól, šířka 1 modul, Icn 6 kA, typ A",
+    "image": "/produkty/628266_LMF-16B-1N-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 26,
+    "name": "PROUDOVY CHRANIC LFE-25-4-030A",
+    "sku": "1658869",
+    "ean": "8590125463993",
+    "category": "Přístroje/Chránič",
+    "description": "Popis produktu:In 25 A, Ue AC 230/400 V, Idn 30 mA, 4pól, Inc 6 kA, typ A",
+    "image": "/produkty/626816_LFE-25-4-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 27,
+    "name": "PROUDOVY CHRANIC LFE-40-4-030A",
+    "sku": "1658870",
+    "ean": "8590125464006",
+    "category": "Přístroje/Chránič",
+    "description": "In 40 A, Ue AC 230/400 V, Idn 30 mA, 4pól, Inc 6 kA, typ A",
+    "image": "/produkty/626823_LFE-40-4-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 28,
+    "name": "PROUDOVY CHRANIC LFE-25-2-030A",
+    "sku": "1658865",
+    "ean": "8590125463955",
+    "category": "Přístroje/Chránič",
+    "description": "In 25 A, Ue AC 230 V, Idn 30 mA, 2pól, Inc 6 kA, typ A",
+    "image": "/produkty/626780_LFE-25-2-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 29,
+    "name": "PROUDOVY CHRANIC LFE-40-2-030A",
+    "sku": "1658866",
+    "ean": "8590125463962",
+    "category": "Přístroje/Chránič",
+    "description": "In 40 A, Ue AC 230 V, Idn 30 mA, 2pól, Inc 6 kA, typ A",
+    "image": "/produkty/626788_LFE-40-2-030A.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 30,
+    "name": "JISTIC LTE-6B-1",
+    "sku": "1249395",
+    "ean": "8590125418764",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 6 A, Ue AC 230/400 V / DC 72 V, charakteristika B, 1pól, Icn 6 kA",
+    "image": "/produkty/628372_LTE-6B-1.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 31,
+    "name": "JISTIC LTE-10B-1",
+    "sku": "1249396",
+    "erpCode": "JZ00079",
+    "ean": "8590125418788",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 10 A, Ue AC 230/400 V / DC 72 V, charakteristika B, 1pól, Icn 6 kA",
+    "image": "/produkty/628344_LTE-10B-1.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 32,
+    "name": "JISTIC LTE-16B-1",
+    "sku": "1249398",
+    "ean": "8590125418801",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 16 A, Ue AC 230/400 V / DC 72 V, charakteristika B, 1pól, Icn 6 kA",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 33,
+    "name": "JISTIC LTE-10B-3",
+    "sku": "1249440",
+    "ean": "8590125419303",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 10 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
+    "image": "/produkty/628448_LTE-10B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 34,
+    "name": "JISTIC LTE-16B-3",
+    "sku": "1249442",
+    "erpCode": "JZ00078",
+    "ean": "8590125419327",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 16 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
+    "image": "/produkty/628452_LTE-16B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 35,
+    "name": "JISTIC LTE-25B-3",
+    "sku": "1249444",
+    "ean": "8590125419341",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 25 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
+    "image": "/produkty/628456_LTE-25B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 36,
+    "name": "JISTIC LTE-32B-3",
+    "sku": "1249445",
+    "ean": "8590125419358",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "In 32 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
+    "image": "/produkty/628458_LTE-32B-3.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 37,
+    "name": "WAGO 2273-205 5X0,5-2,5",
+    "sku": "2273-205",
+    "ean": "4050821027874",
+    "category": "Přístroje/Jističe/6kA",
+    "description": "Spojovací krabicová svorka COMPACT,Pro plné vodiče,Max. 2,5 mm²,Transparentní",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 38,
+    "name": "SVORKA WAGO 2273-203 3X0,5-2,5 COMPACT",
+    "sku": "2273-203",
+    "ean": "4050821027850",
+    "category": "Úložný a spojovací materiál/Svorky a svorkovnice/Svorky krabicové",
+    "description": "Spojovací krabicová svorka COMPACT,Pro plné vodiče,Max. 2,5 mm²",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 39,
+    "name": "SVORKA WAGO 2273-202 2X0,5-2,5 COMPACT",
+    "sku": "2273-202",
+    "ean": "4050821027843",
+    "category": "Úložný a spojovací materiál/Svorky a svorkovnice/Svorky krabicové",
+    "description": "Spojovací krabicová svorka COMPACT,Pro plné vodiče,Max. 2,5 mm²,Transparentní",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 40,
+    "name": "SVORKA WAGO 221-415 5X4 ORANZ. PACKA",
+    "sku": "221-415",
+    "ean": "4055143234658",
+    "category": "Úložný a spojovací materiál/Svorky a svorkovnice/Svorky krabicové",
+    "description": "Spojovací svorka COMPACT, Pro všechny druhy vodičů, Max. 4 mm², Transparentní",
+    "image": "/produkty/221-415.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 41,
+    "name": "SVORKA WAGO 221-413 3X4 ORANZ. PACKA",
+    "sku": "221-413",
+    "ean": "4050821808442",
+    "category": "Úložný a spojovací materiál/Svorky a svorkovnice/Svorky krabicové",
+    "description": "Spojovací svorka COMPACT, Pro všechny druhy vodičů, Max. 4 mm², Transparentní",
+    "image": "/produkty/221-413.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 42,
+    "name": "SVORKA WAGO 221-412 2X4 ORANZ. PACKA",
+    "sku": "221-412",
+    "ean": "4050821808435",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Spojovací svorka COMPACT, Pro všechny druhy vodičů, Max. 4 mm², Transparentní",
+    "image": "/produkty/221-412.jpg",
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 43,
+    "name": "KRABICE PRISTROJOVA KP 68 KA 68MM",
+    "sku": "KP68 KA",
+    "ean": "8595568910592",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabice přístrojová, světle šedá barva. Doporučuje se spojovat max.3 krabice v jedné řadě. Hloubka 43mm. Určeno pro montáž do zdiva.",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 44,
+    "name": "KRABICE PRISTROJ. HLUBOKA KPR 68 KA 68MM",
+    "sku": "KPR 68 KA",
+    "ean": "8595057648302",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabice přístrojová rozvodná, průměr 73mm, hloubka 66mm, PVC Určeno pro montáž do zdiva.",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 45,
+    "name": "KRABICE PRISTROJOVA KP 68/2 KA MELKA",
+    "sku": "KP 68/2 KA",
+    "ean": "8595057600089",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabice přístrojová, světle šedá barva,  PVC, hloubka 30mm Určeno pro montáž do zdiva.",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 46,
+    "name": "KRABICE ACIDUR 6455-11 5. P/2 5P SEDA",
+    "sku": "6455-11 5.P/2",
+    "ean": "8584128128263",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabicová rozvodka plastová, 5-pólová, šedá. Rozměry (DxŠxV) 125x125x45 mm. Určeno pro povrchovou montáž, krytí IP67",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 47,
+    "name": "KRABICE DO SDK UNIVERZ. KUL 68-45/LD NA",
+    "sku": "KUL 68-45/LD NA",
+    "ean": "8595568929709",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabice univerzální, okrová barva. Určeno pro montáž do duté stěny.",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 48,
+    "name": "KRABICE SDK PRISTROJOVA KPL 64-50/2LD NA",
+    "sku": "KPL 64-50/2LD NA",
+    "ean": "8595568926968",
+    "category": "Úložný a spojovací materiál/Ulozny material/Krabice",
+    "description": "Krabice pro dva přístroje, montáž do dutých stěn ze sádrokartonu, hloubka 50mm, otvory s ​membránou z ​pružného materiálu",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 49,
+    "name": "METREL MI 3102 XE BT",
+    "sku": "2006693",
+    "ean": "",
+    "category": "Měření",
+    "description": "METREL MI 3102 XE BT je multifunkční revizní přístroj určený pro měření a revizi elektrických instalací. Měření: Umožňuje měřit přechodový odpor, izolační odpor, proudové chrániče, zemní odpor, výkon a harmonické složky. 3 Automatické postupy: Nabízí předdefinované automatické postupy měření, které usnadňují revizi v sítích TN, TT a IT. 2 Kompatibilita: Přístroj podporuje testování pomocí USB, Bluetooth a RS232, což usnadňuje dokumentaci a vyhodnocení výsledků. 2 Další funkce: Měří skutečnou impedanci smyčky, sleduje fází a umožňuje on-line monitorování napětí. 2 Tento přístroj je ideální pro profesionály, kteří potřebují kompletní sadu bezpečnostních zkoušek při instalaci podle IEC/EN 61557.",
+    "image": null,
+    "availability": "Na dotaz"
+  },
+  {
+    "id": 50,
+    "name": "TESTER INSTALACI EUROTEST XD MI 3155 EU",
+    "sku": "1701993",
+    "ean": "",
+    "category": "Měření",
+    "description": "sdružený revizní přístroj, určený pro prvotní i periodické testování domácích a průmyslových instalací - jednofázových i vícefázových. MI 3155 je navržen pro testování TT, TN, IT uzemňovacích systémů, a také medicínských instalací. Ovládání se provádí pomocí velkého dotykového displeje. Přístroj nabízí jak předprogramované autosekvence TT (U, Zln, Zs, Uc); TN/RCD (U, Zln, Zs, Rpe); TN (U, Zln, Zlpe, Rpe); IT (U, Zln, Isc, Isfl, IMD), tak možnost naprogramovat si vlastní. Dalšími funkcemi jsou např. měření výkonu, účiníku, osvětlení, čas vybíjení, analýza harmonických, sled fází, test RCD (všeobecné a selektivní, typy AC, A, F, B, B+, MI RCD, EV RCD, PRCD, PRCD-K, PRCD-S), měření izolačního odporu napětím 50 ~ 2500 V, impedance smyčky a sítě, kontinuitu PE proudem 200 mA se změnou polarity, nebo proudem 7 mA (bez vybavení chrániče), TRMS napětí, frekvenci, sled fází, test RCD (hlavní a selektivní, typ AC, A, F, B, B+), zemní odpor (3-drátově i za pomocí 2 kleští), měrný odpor půdy pomocí Ro adaptéru (opt.), podpora EVSE (zařízení elektromobilů), vestavěná nápověda včetně schémat zapojení, velká databáze pojistek apod. Komunikace s PC probíhá prostřednictvím BT. Sada EU nabízí oproti sadě ST navíc proudové kleště A 1018 a A 1019, plnou licenci pro software Metrel ES Manager, Android aplikaci Metrel aMESM, a také baterii s dvojnásobnou kapacitou (8800 mAh).",
+    "image": null,
+    "availability": "Na dotaz"
+  }
+]

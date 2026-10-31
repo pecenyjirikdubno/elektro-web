@@ -137,42 +137,45 @@ export default function NastrojePage() {
   });
 
   async function handleExportPdf() {
-    if (!exportRef.current || !isValid) return;
+    if (!isValid || isExporting) return;
 
     try {
       setIsExporting(true);
-      const [{ default: jsPDF }, { default: html2canvas }] = await Promise.all([
-        import("jspdf"),
-        import("html2canvas"),
-      ]);
 
-      const canvas = await html2canvas(exportRef.current, {
-        scale: 2,
-        backgroundColor: "#020617",
-        useCORS: true,
+      const { exportCableCalculationPdf } = await import(
+        "../../lib/cableCalculationPdf"
+      );
+
+      await exportCableCalculationPdf({
+        phase: phase === "3f" ? "Třífázová" : "Jednofázová",
+        powerKw,
+        voltage,
+        cosPhi,
+        efficiency,
+        material,
+        lengthM,
+        crossSection,
+        current,
+        recommendedBreaker,
+        recommendedSection: recommendedSection
+          ? `${recommendedSection.section} mm² ${material}`
+          : `nad ${
+              capacityTable[material][
+                capacityTable[material].length - 1
+              ].section
+            } mm² ${material}`,
+        voltageDrop,
+        voltageDropPercent,
+        selectedSectionOk,
+        voltageDropOk,
+        breakerOk,
       });
-
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      const pageHeight = pdf.internal.pageSize.getHeight();
-      const imgWidth = pageWidth - 20;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-      let heightLeft = imgHeight;
-      let position = 10;
-
-      pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight - 20;
-
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight + 10;
-        pdf.addPage();
-        pdf.addImage(imgData, "PNG", 10, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight - 20;
-      }
-
-      pdf.save("jz-elektro-vypocet-kabelu.pdf");
+    } catch (error) {
+      console.error("Export PDF selhal:", error);
+      window.alert(
+        "Nepoda?ilo se vytvo?it PDF. " +
+        "Zkontrolujte pros?m konzoli prohl??e?e."
+      );
     } finally {
       setIsExporting(false);
     }
@@ -338,6 +341,7 @@ export default function NastrojePage() {
 
         <div
           ref={exportRef}
+              data-pdf-export
           className="rounded-3xl border border-amber-400/20 bg-slate-900 p-6 shadow-2xl"
         >
           <div className="flex flex-wrap items-start justify-between gap-4">

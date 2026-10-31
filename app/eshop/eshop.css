@@ -1,0 +1,33 @@
+.jz-shop{background:#f6f8fb;color:#1d2a3b;font-family:Arial,Helvetica,sans-serif;min-height:100vh}.jz-shop *{box-sizing:border-box}
+.jz-shop header{background:#fff;border-bottom:1px solid #e2e8f0}.jz-shop .wrap{max-width:1180px;margin:auto;padding:0 24px}.jz-shop .top{height:76px;display:flex;align-items:center;justify-content:space-between}.jz-shop .brand{text-decoration:none;color:#1755a0;font-size:26px;font-weight:800;letter-spacing:-1px}.jz-shop .brand b{color:#253f61}.jz-shop .tag{font-size:11px;color:#65748a;letter-spacing:1px}.jz-shop .hero{background:linear-gradient(110deg,#123c70,#1b65a6);color:white;border-radius:16px;padding:48px;margin:30px 0 38px}.jz-shop .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#bcd9f6}.jz-shop .hero h1{font-size:clamp(28px,4vw,43px);line-height:1.17;margin:15px 0}.jz-shop .hero p{color:#e3effc;max-width:650px;line-height:1.65}.jz-shop .notice{display:inline-block;background:#eaf2fb;color:#154779;padding:10px 13px;border-radius:7px;font-size:13px;margin-top:12px}.jz-shop .heading{display:flex;justify-content:space-between}.jz-shop .heading h2{margin:0;font-size:27px}.jz-shop .heading p{color:#738093}.jz-shop .filters{display:flex;gap:12px;margin:16px 0 24px}.filters input,.jz-shop .filters select{border:1px solid #d9e1eb;border-radius:9px;padding:13px;background:#fff;font-size:14px}.jz-shop .filters input{flex:2;min-width:0}.jz-shop .filters select{flex:1;min-width:0}.jz-shop .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.jz-shop .product{background:white;border:1px solid #e2e7ef;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}.jz-shop .photo{height:205px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #edf1f5;padding:16px}.jz-shop .photo img{max-width:100%;max-height:100%;object-fit:contain}.jz-shop .placeholder{color:#a8b4c3;text-align:center;font-size:22px;font-weight:800}.jz-shop .placeholder small{display:block;font-size:12px;font-weight:normal;margin-top:12px}.jz-shop .info{padding:19px;display:flex;flex-direction:column;flex:1}.jz-shop .category{font-size:11px;color:#2667a5;text-transform:uppercase;font-weight:700;letter-spacing:.4px}.jz-shop .info h3{font-size:17px;margin:11px 0}.jz-shop .sku{font-size:12px;color:#748093}.jz-shop .desc{font-size:13px;color:#566476;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:57px}.jz-shop .bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:15px}.jz-shop .bottom span{font-weight:700;font-size:13px}.jz-shop .bottom button{background:#1766ad;color:white;border:0;border-radius:7px;padding:10px;cursor:pointer}.jz-shop .empty{padding:40px;text-align:center}.jz-shop footer{margin-top:50px;padding:28px 0;background:#e8eef5;color:#617187;font-size:12px}.jz-shop .overlay{position:fixed;inset:0;background:#071629a8;display:flex;align-items:center;justify-content:center;padding:20px}.jz-shop .modal{background:white;border-radius:14px;padding:35px;max-width:620px;width:100%;max-height:85vh;overflow:auto;position:relative;line-height:1.65}.jz-shop .close{position:absolute;right:16px;top:12px;background:none;border:0;font-size:30px;cursor:pointer}@media(max-width:850px){.jz-shop .products{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.jz-shop .products{grid-template-columns:1fr}.jz-shop .filters{flex-direction:column}.jz-shop .hero{padding:28px}.jz-shop .tag{font-size:9px}.jz-shop .top{gap:12px}}
+/* Verze 0.3 – hierarchické kategorie a širší katalog */
+.jz-shop .wrap{max-width:1600px}
+.jz-shop .shop-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}
+.jz-shop .shop-sidebar{background:#fff;border:1px solid #e2e7ef;border-radius:12px;padding:17px 9px;position:sticky;top:16px}
+.jz-shop .sidebar-heading{font-size:16px;font-weight:800;padding:3px 12px 15px}
+.jz-shop .all-categories{width:100%;display:flex;justify-content:space-between;gap:10px;border:0;background:transparent;padding:11px 12px;border-radius:7px;text-align:left;font-weight:700;cursor:pointer;color:#263c58}
+.jz-shop .all-categories.is-active,.jz-shop .category-row.is-active{background:#eaf2fb;color:#13549a}
+.jz-shop .category-tree,.jz-shop .category-children{list-style:none;padding:0;margin:0}
+.jz-shop .category-row{display:flex;align-items:center;border-radius:7px;min-height:38px}
+.jz-shop .tree-toggle{width:24px;min-width:24px;height:30px;border:0;background:transparent;color:#2867a2;cursor:pointer;font-size:18px}
+.jz-shop .tree-spacer{width:24px;min-width:24px}
+.jz-shop .category-choice{flex:1;display:flex;align-items:center;justify-content:space-between;gap:7px;border:0;background:transparent;color:inherit;text-align:left;padding:8px 8px 8px 0;font-size:12px;line-height:1.4;cursor:pointer}
+.jz-shop .category-count{background:#edf2f8;border-radius:20px;color:#5d7088;font-size:11px;padding:2px 6px;white-space:nowrap}
+.jz-shop .shop-results{min-width:0}
+.jz-shop .filters{margin:0 0 12px}
+.jz-shop .reset-filters{background:#fff;border:1px solid #d9e1eb;border-radius:9px;padding:0 15px;color:#155a9c;cursor:pointer}
+.jz-shop .breadcrumbs{margin:0 0 18px;font-size:12px;color:#62758a;line-height:1.7}
+.jz-shop .breadcrumbs button{border:0;background:none;color:#2166a4;cursor:pointer;padding:0 4px}
+.jz-shop .breadcrumbs button:first-child{padding-left:0}
+.jz-shop .products{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.jz-shop .photo{height:165px;padding:12px}
+.jz-shop .info{padding:14px}
+.jz-shop .info h3{font-size:15px}
+.jz-shop .bottom{flex-wrap:wrap}
+.jz-shop .bottom button{font-size:12px}
+.jz-shop .overlay{z-index:1000}
+.jz-shop .empty button{border:0;background:transparent;color:#1766ad;cursor:pointer;text-decoration:underline}
+@media(max-width:1350px){.jz-shop .products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1050px){.jz-shop .shop-layout{grid-template-columns:230px minmax(0,1fr)}.jz-shop .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.jz-shop .shop-layout{display:block}.jz-shop .shop-sidebar{position:static;margin-bottom:20px}.jz-shop .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.jz-shop .products{grid-template-columns:1fr}.jz-shop .reset-filters{padding:12px}}

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "CYKY",
+    "type": "Silový kabel",
+    "use": "Pevné uložení v zemi, betonu i vnitřních rozvodech",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cyky.png",
+    "replacement": "bez přímého Hxx ekvivalentu"
+  },
+  {
+    "name": "AYKY",
+    "type": "Silový kabel",
+    "use": "Hlavní přívody v zemi (hliník)",
+    "material": "Al",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/ayky.png",
+    "replacement": "NAYY-J"
+  },
+  {
+    "name": "CYSY",
+    "type": "Silový kabel",
+    "use": "Pohyblivé přívody",
+    "material": "Cu",
+    "voltage": "300/500 V",
+    "image": "/kabely/cysy.png",
+    "replacement": "H05VV-F"
+  },
+  {
+    "name": "H07RN-F",
+    "type": "Pryžový kabel",
+    "use": "Staveniště, venkovní použití, vysoká odolnost",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "image": "/kabely/h07rn-f.png",
+    "replacement": "V definovaných případech CGTG"
+  },
+  {
+    "name": "LYiCY",
+    "type": "Vodič",
+    "use": "Měřící a regulační technika",
+    "material": "Cu",
+    "voltage": "450/750 V",
+    "image": "/kabely/ly.png",
+    "replacement": "bez přímého Hxx ekvivalentu v definovaných případech H07V-U"
+  },
+  {
+    "name": "CYKYLo",
+    "type": "Pevné uložení ve vnitřních rozvodech",
+    "use": "Vnitřní instalace",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cykylo.png",
+    "replacement": "bez přímého H ekvivalentu"
+  },
+  {
+    "name": "SYKFY",
+    "type": "Datový kabel",
+    "use": "Telefonní a datové rozvody",
+    "material": "Cu",
+    "voltage": "slaboproud",
+    "image": "/kabely/sykfy.png",
+    "replacement": "bez přímého Hxx ekvivalentu v definovaných případech UTP/STP"
+  },
+  {
+    "name": "CGTG",
+    "type": "Gumový kabel",
+    "use": "Těžké provozy, doly, průmysl",
+    "material": "Cu",
+    "voltage": "0,6/1 kV",
+    "image": "/kabely/cgtg.png",
+    "replacement": "V definovaných případech H07RN-F"
+  }
+]
