@@ -165,13 +165,13 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 pb-3 lg:hidden">
           <button
             type="button"
-            aria-label={mobileMenuOpen ? "Zav??t menu" : "Otev??t menu"}
+            aria-label={mobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800"
           >
-            {mobileMenuOpen ? "? Zav??t menu" : "? Menu"}
+            {mobileMenuOpen ? "✕ Zavřít menu" : "☰ Menu"}
           </button>
           {mobileMenuOpen && (
             <nav id="mobile-navigation" aria-label="Mobiln? navigace" className="mt-3 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
