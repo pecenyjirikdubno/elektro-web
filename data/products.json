@@ -7,7 +7,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje hnědý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00637"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje hnědý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00003"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00638"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00008"
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00288"
   },
   {
     "id": 6,
@@ -57,7 +62,8 @@
     "category": "Kabely/Pro pevné uložení",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+ vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00009"
   },
   {
     "id": 7,
@@ -67,7 +73,8 @@
     "category": "Ostatní",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý++zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00006"
   },
   {
     "id": 8,
@@ -77,7 +84,8 @@
     "category": "Ostatní",
     "description": "Kabel pro pevné uložení ve vnitřních a venkovních prostorách, v zemi, ve zdivu, v betonu. Kabely jsou odolné proti UV záření a proti šíření plamene dle ČSN EN 50 265-2-1. Kabel obsahuje černý+hnědý+šedý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00007"
   },
   {
     "id": 9,
@@ -87,7 +95,8 @@
     "category": "Kabely/Pohyblivé přívody",
     "description": "Ohebný kabel 3x1,5 s ​PVC pláštěm do suchého prostředí pro střední mechanické namáhání k ​pohyblivým přívodům. Bílý plášť, kabel obsahuje hnědý+modrý+zelenožlutý vodič",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00289"
   },
   {
     "id": 10,
@@ -127,7 +136,8 @@
     "category": "Kabely/Pohyblivé přívody",
     "description": "Ohebný vodič pro pevné uložení jako propojovací vodič do trubek, přístrojů a ​rozvaděčů. Barva žluto/zelená",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "JZ00040"
   },
   {
     "id": 14,
@@ -157,7 +167,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628985_LTN-25B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249597"
   },
   {
     "id": 17,
@@ -167,7 +178,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628983_LTN-20B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249596"
   },
   {
     "id": 18,
@@ -177,7 +189,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628978_LTN-16B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249595"
   },
   {
     "id": 19,
@@ -187,7 +200,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628975_LTN-10B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249593"
   },
   {
     "id": 20,
@@ -197,7 +211,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628518_LTN-10B-1.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249464"
   },
   {
     "id": 21,
@@ -207,7 +222,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628542_LTN-6B-1.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249463"
   },
   {
     "id": 22,
@@ -217,7 +233,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628522_LTN-16B-1.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249466"
   },
   {
     "id": 23,
@@ -227,7 +244,8 @@
     "category": "Přístroje/Jističe/10kA",
     "description": "",
     "image": "/produkty/628989_LTN-32B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249598"
   },
   {
     "id": 24,
@@ -237,7 +255,8 @@
     "category": "Přístroje/Jističochrániče(6 kA)/do 16 A",
     "description": "In 10 A, Ue AC 230 V, charakteristika B, Idn 30 mA, 1+N-pól, šířka 1 modul, Icn 6 kA, typ A",
     "image": "/produkty/628262_LMF-10B-1N-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1172385"
   },
   {
     "id": 25,
@@ -247,7 +266,8 @@
     "category": "Přístroje/Jističochrániče(6 kA)/do 16 A",
     "description": "In 16 A, Ue AC 230 V, charakteristika B, Idn 30 mA, 1+N-pól, šířka 1 modul, Icn 6 kA, typ A",
     "image": "/produkty/628266_LMF-16B-1N-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1172389"
   },
   {
     "id": 26,
@@ -257,7 +277,8 @@
     "category": "Přístroje/Chránič",
     "description": "Popis produktu:In 25 A, Ue AC 230/400 V, Idn 30 mA, 4pól, Inc 6 kA, typ A",
     "image": "/produkty/626816_LFE-25-4-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1658869"
   },
   {
     "id": 27,
@@ -267,7 +288,8 @@
     "category": "Přístroje/Chránič",
     "description": "In 40 A, Ue AC 230/400 V, Idn 30 mA, 4pól, Inc 6 kA, typ A",
     "image": "/produkty/626823_LFE-40-4-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1658870"
   },
   {
     "id": 28,
@@ -277,7 +299,8 @@
     "category": "Přístroje/Chránič",
     "description": "In 25 A, Ue AC 230 V, Idn 30 mA, 2pól, Inc 6 kA, typ A",
     "image": "/produkty/626780_LFE-25-2-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1658865"
   },
   {
     "id": 29,
@@ -287,7 +310,8 @@
     "category": "Přístroje/Chránič",
     "description": "In 40 A, Ue AC 230 V, Idn 30 mA, 2pól, Inc 6 kA, typ A",
     "image": "/produkty/626788_LFE-40-2-030A.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1658866"
   },
   {
     "id": 30,
@@ -297,7 +321,8 @@
     "category": "Přístroje/Jističe/6kA",
     "description": "In 6 A, Ue AC 230/400 V / DC 72 V, charakteristika B, 1pól, Icn 6 kA",
     "image": "/produkty/628372_LTE-6B-1.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249395"
   },
   {
     "id": 31,
@@ -318,7 +343,8 @@
     "category": "Přístroje/Jističe/6kA",
     "description": "In 16 A, Ue AC 230/400 V / DC 72 V, charakteristika B, 1pól, Icn 6 kA",
     "image": null,
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249398"
   },
   {
     "id": 33,
@@ -328,7 +354,8 @@
     "category": "Přístroje/Jističe/6kA",
     "description": "In 10 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
     "image": "/produkty/628448_LTE-10B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249440"
   },
   {
     "id": 34,
@@ -349,7 +376,8 @@
     "category": "Přístroje/Jističe/6kA",
     "description": "In 25 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
     "image": "/produkty/628456_LTE-25B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249444"
   },
   {
     "id": 36,
@@ -359,7 +387,8 @@
     "category": "Přístroje/Jističe/6kA",
     "description": "In 32 A, Ue AC 230/400 V / DC 216 V, charakteristika B, 3pól, Icn 6 kA",
     "image": "/produkty/628458_LTE-32B-3.jpg",
-    "availability": "Na dotaz"
+    "availability": "Na dotaz",
+    "erpCode": "1249445"
   },
   {
     "id": 37,
