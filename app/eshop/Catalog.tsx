@@ -81,6 +81,7 @@ function CategoryBranch({
 }
 
 export default function Catalog({ products }: { products: Product[] }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
@@ -111,7 +112,44 @@ export default function Catalog({ products }: { products: Product[] }) {
   }, [selected]);
 
   return <>
-    <header><div className="wrap top"><a className="brand" href="/">JZ <b>ELEKTRO</b></a><span className="tag">PILOTNÍ KATALOG · BEZ OBJEDNÁVEK</span></div></header>
+    <header className="site-header">
+      <div className="site-header-inner">
+        <a className="site-brand" href="/" aria-label="JZ Elektro - hlavni stranka">
+          <img src="/logo.svg" alt="" />
+          <span>JZ <strong>ELEKTRO</strong></span>
+        </a>
+        <nav className="site-nav" aria-label="Hlavni navigace">
+          <a href="/">Domů</a>
+          <a href="/#sluzby">Naše služby</a>
+          <a href="/eshop" aria-current="page">E-shop</a>
+          <a href="/#reference">Realizace</a>
+          <a href="/nastroje">Elektro nástroje</a>
+          <a href="/#proc">O nás</a>
+          <a href="/#kontakt">Kontakt</a>
+        </nav>
+        <button
+          type="button"
+          className="site-menu-toggle"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="eshop-mobile-navigation"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? "✕ Zavřít menu" : "☰ Menu"}
+        </button>
+      </div>
+      {mobileMenuOpen && (
+        <nav id="eshop-mobile-navigation" className="site-mobile-nav" aria-label="Mobilni navigace">
+          <a href="/" onClick={() => setMobileMenuOpen(false)}>Domů</a>
+          <a href="/#sluzby" onClick={() => setMobileMenuOpen(false)}>Naše služby</a>
+          <a href="/eshop" aria-current="page" onClick={() => setMobileMenuOpen(false)}>E-shop</a>
+          <a href="/#reference" onClick={() => setMobileMenuOpen(false)}>Realizace</a>
+          <a href="/nastroje" onClick={() => setMobileMenuOpen(false)}>Elektro nástroje</a>
+          <a href="/#proc" onClick={() => setMobileMenuOpen(false)}>O nás</a>
+          <a href="/#kontakt" onClick={() => setMobileMenuOpen(false)}>Kontakt</a>
+        </nav>
+      )}
+      <div className="site-pilot">PILOTNÍ KATALOG · BEZ OBJEDNÁVEK</div>
+    </header>
     <main className="wrap">
       <section className="hero">
         <div className="eyebrow">JZ Elektro · odborný výběr</div>
