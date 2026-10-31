@@ -127,6 +127,9 @@ export default function Catalog({ products }: { products: Product[] }) {
           <a href="/#proc">O nás</a>
           <a href="/#kontakt">Kontakt</a>
         </nav>
+        <a className="site-cta" href="/#kontakt">
+          Nezávazná poptávka <span aria-hidden="true">→</span>
+        </a>
         <button
           type="button"
           className="site-menu-toggle"

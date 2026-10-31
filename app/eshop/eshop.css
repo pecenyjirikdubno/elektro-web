@@ -50,3 +50,29 @@
 @media(max-width:1050px){.jz-shop .site-nav{display:none}.jz-shop .site-menu-toggle{display:block}}
 @media(min-width:1051px){.jz-shop .site-mobile-nav{display:none}}
 @media(max-width:560px){.jz-shop .site-header-inner{padding:10px 18px}.jz-shop .site-brand{font-size:16px}.jz-shop .site-brand img{width:44px;height:44px}}
+
+
+/* Poptavkove tlacitko v hlavicce e-shopu */
+.jz-shop .site-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:13px 16px;
+  background:#dc0000;
+  color:#fff;
+  border-radius:9px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.jz-shop .site-cta:hover{background:#b91c1c}
+@media(max-width:1050px){
+  .jz-shop .site-header-inner{flex-wrap:wrap}
+  .jz-shop .site-menu-toggle{order:3}
+}
+@media(max-width:560px){
+  .jz-shop .site-cta{padding:11px 10px;font-size:10px}
+  .jz-shop .site-menu-toggle{margin-right:auto}
+}
